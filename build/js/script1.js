@@ -6,7 +6,11 @@ const sample = [1, 2, 2, 2, 2, 2, 3, 3, 3, 4, 4, 4, 4, 1, 1, 2, 3, 4];
 const removeDuplicates = (arr) => {
     return Array.from(new Set(arr));
 };
-logMsg(removeDuplicates(sample));
+// logMsg(removeDuplicates(sample))
+// remove duplicates - approach 2
+const removeDups = new Set(sample);
+const convertToArray = Array.from(removeDups);
+logMsg(convertToArray);
 // reverse a string
 const reverse = (str) => {
     let reversedStr = [];

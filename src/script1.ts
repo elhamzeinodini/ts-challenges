@@ -10,6 +10,11 @@ const removeDuplicates = (arr:number[]):number[] => {
 
 logMsg(removeDuplicates(sample))
 
+// remove duplicates - approach 2
+const removeDups:Set<number> = new Set(sample)
+const convertToArray:number[] = Array.from(removeDups)
+logMsg(convertToArray)
+
 // reverse a string
 
 const reverse = (str:string):string => {
@@ -76,3 +81,5 @@ const isBalanced = (input:string):boolean => {
 }
 
 logMsg(isBalanced("()"))
+
+
