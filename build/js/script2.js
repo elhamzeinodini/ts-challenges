@@ -35,3 +35,24 @@ const item10 = Number(item9);
 console.log(item10, typeof item10);
 const item11 = parseInt(item9);
 console.log(item11, typeof item11);
+// explain what is a callback function with an example
+// a callback function is a function that is passed to another function as an argument
+function example(arr, callback) {
+    arr.push(10);
+    callback();
+}
+const arr = [1, 2, 3, 4, 5, 6];
+example(arr, () => {
+    console.log("this is a callback");
+});
+// "Welcome to this Javascript Guide!" should be become "emocleW ot siht tpircsavaJ !ediuG"
+const reverseString = (str) => {
+    return str.split("").reverse().join("");
+};
+console.log(reverseString("Welcome to this Javascript Guide!"));
+// How to empty an array
+const arr1 = ["a", "b", "c", "d"];
+const saveArr1 = arr1;
+arr1.length = 0;
+console.log(arr1);
+// 5
