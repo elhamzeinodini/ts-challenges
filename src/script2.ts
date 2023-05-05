@@ -70,8 +70,22 @@ const saveArr1:string[] = arr1
 arr1.length = 0
 console.log(arr1)
 
-// 5
+// forEach vs map
+// both of them are array methods, map returns a new array , doesn't modify the original array
+// forEach doesn't return anything, it's just used to iterate over elements of an array
 
+const mapResult:number[] = nums.map((num:number) => num + 2)
+console.log(mapResult);
 
+const forEachResult:void = nums.forEach((num:number) => num + 2)
+console.log(forEachResult);
+// returns undefined
+
+// also, in map you can chain other array methods, but in forEach you cannot
+const mapResultChained:number[] = nums.map((num:number) => num + 2)
+.filter((num:number):boolean => num > 3)
+console.log(mapResultChained);
+
+ 
 
 
